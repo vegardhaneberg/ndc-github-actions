@@ -50,7 +50,7 @@ jobs:
   Production:
     runs-on: ubuntu-latest
     needs: [ Test, Load-Test ]
-    if: input.environment == "Production"
+    if: inputs.environment == "Production"
     steps:
       - name: Step 1
         run: echo "prod"
