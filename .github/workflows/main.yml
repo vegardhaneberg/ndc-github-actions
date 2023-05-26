@@ -23,12 +23,8 @@ jobs:
       - name: "Checkout GitHub action"
         uses: actions/checkout@v2
       - name: List all files
-        shell: pwsh
         run: |
-          $files = Get-ChildItem -File
-
-          foreach ($file in $files) {
-              Write-Output $file.FullName
-          }
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
     
     
