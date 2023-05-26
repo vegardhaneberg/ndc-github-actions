@@ -1,6 +1,4 @@
 #!/bin/bash
 
-echo "yoyoyoyoyo"
-
-current_time=$(date +"%T")
-echo "::set-output name=time::$current_time"
+echo "yoyoyoyoyo $1"
+echo "time=$(date)" >> $GITHUB_OUTPUT
